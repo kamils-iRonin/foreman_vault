@@ -1,0 +1,26 @@
+test:
+  adapter: postgresql
+  encoding: unicode
+  host: localhost
+  port: 5432
+  database: test
+  user: postgres
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+
+development:
+  adapter: postgresql
+  encoding: unicode
+  host: localhost
+  port: 5432
+  database: development
+  user: postgres
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+
+production:
+  adapter: postgresql
+  encoding: unicode
+  host: localhost
+  port: 5432
+  database: production
+  user: postgres
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
