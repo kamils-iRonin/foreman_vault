@@ -2,10 +2,6 @@
 
 require 'rake/testtask'
 
-# Tasks
-namespace :foreman_vault do
-end
-
 # Tests
 namespace :test do
   desc 'Test ForemanVault'

@@ -43,13 +43,13 @@ class Setting
         return nil unless VaultConnection.table_exists?
         return unless VaultConnection.unscoped.count == 1
 
-        VaultConnection.unscoped.first.name
+        VaultConnection.unscoped.first.id
       end
 
       def vault_connections_collection
         return [] unless VaultConnection.table_exists?
 
-        proc { Hash[VaultConnection.unscoped.all.map { |vc| [vc.name, vc.name] }] }
+        proc { Hash[VaultConnection.unscoped.all.map { |vc| [vc.id, vc.name] }] }
       end
 
       def set_vault_policy_template
